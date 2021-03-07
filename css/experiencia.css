@@ -1,0 +1,498 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,500;1,600;1,700;1,800&family=Oswald:wght@200;300;400;500;600;700&family=Righteous&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container-body{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 2820px 120px;
+    grid-template-areas:
+      "hd hd "
+      "main main "
+      "ft ft ";
+
+}
+
+
+header{
+    grid-area: hd;
+    background:rgb(0, 0, 0);
+    border: 1px solid black;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+
+
+}
+h1{
+    margin-top: 30px;
+    margin-left: 15px;
+    font-size: 32px;
+    font-family: 'Righteous', cursive;
+    letter-spacing: 2px;
+}
+
+h1 > a {
+    text-decoration: none;
+    color: #ffffff;
+}
+h1 > a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+    
+nav{
+    margin-top: 24px;
+        
+}
+
+nav > ul{
+ 
+    display: grid; 
+    align-self: end;
+    margin-top: 9px;
+    grid-template-columns: repeat(3,1fr);
+}
+
+nav > ul > li{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+nav > ul > li > a{
+    color: #000000;
+    text-decoration: none;
+    padding: 8px;
+    background-color: #a5c6f1;
+    border-radius: 8px 8px;
+    font-family: 'Oswald', sans-serif;
+}
+nav > ul > li > a:hover{
+    padding: 8px;
+    background-color: #cd5d7d;
+    color: #f9f9f9;
+    text-decoration: none;
+    border-radius: 8px 8px;
+}
+
+main{
+    grid-area: main;
+    background: rgb(255, 255, 255);
+    /*height: 906px;*/
+}
+
+
+.slider {
+    width: 84%;
+    margin: 9px auto;
+    overflow: hidden;
+    text-align: center;
+    grid-column: 1/4;
+
+}
+
+.slider ul {
+	display: flex;
+	padding: 0;
+	width: 400%;
+	
+	animation: cambio 16s infinite alternate linear;
+}
+
+.slider li {
+	width: 100%;
+	list-style: none;
+}
+
+.slider img {
+	width: 64%;
+}
+
+@keyframes cambio {
+	0% {margin-left: 0;}
+	20% {margin-left: 0;}
+	
+	25% {margin-left: -100%;}
+	45% {margin-left: -100%;}
+	
+	50% {margin-left: -200%;}
+	70% {margin-left: -200%;}
+	
+	75% {margin-left: -300%;}
+	100% {margin-left: -300%;}
+}
+.sec-proyectos{
+    display: grid;
+    grid-template-rows:  100px 460px 1450px;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+}
+.sec-proyectos > h3 {
+    grid-column: 1/4;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    color: #022853;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+
+}
+
+.cards1{
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: grid;
+    grid-template-rows:  520px 479px 414px;
+    grid-column: 1/4;
+    grid-gap: 14px 5px;
+    background: #022853;
+}
+.cards1 > article > figure > img{
+    border-radius: 111px;
+    background: white;
+    margin-left: 14px;
+    
+}
+
+.cards1 > article > figure > img:hover{
+    border-radius: 15px;
+    background: white;
+    margin-left: 14px;
+    transition-duration: 1s, 1s;
+
+}
+/*identidad corporativa*/
+.proyec1{
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+.proyec1 > h4{
+  color:#a5c6f1;
+  margin: 0px 0px 16px 0px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 30px;
+    font-weight: 700;
+}
+.proyec1 > p{
+    text-align: center;
+    width: 85%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.proyec1 > .imagenes1{
+  display: flex;
+  justify-content: space-around;
+ 
+}
+/*marca blanca*/
+.proyec2{
+  grid-column: 1/3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.proyec2 > h4{
+    color: #a5c6f1;
+    margin: 0px 0px 16px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+.proyec2 > p{
+    text-align: center;
+    width: 460px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/*netol*/
+.proyec3{
+  grid-column: 3/5;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.proyec3 > h4{
+    color: #a5c6f1;
+    margin: 0px 0px 16px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+.proyec3 > p{
+    text-align: center;
+    width: 460px;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+/*trufas*/
+.proyec4{
+    grid-column: 1/5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.proyec4 > h4{
+    color:#a5c6f1;
+    margin: 0px 0px 16px 0px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 30px;
+    font-weight: 700;
+}
+.proyec4 > p{
+    text-align: center;
+    width: 85%;
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.proyec4 > .imagenes4{
+  display: flex;
+  justify-content: space-around;
+ 
+}
+
+/*secion trabajos realizados*/
+.sec-trabajo{
+    display: grid;
+    grid-template-rows: 100px 415px;
+    grid-template-columns: 1fr 1fr 1fr;
+
+}
+.sec-trabajo > h3{
+    grid-column: 1/4;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 35px;
+    color: #022853;
+}
+.cards2{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.cards2 > .trabajo1{
+    grid-column: 1/2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 7px;
+    border-radius: 16px;
+    width: 358px;
+    background: #d7f7f5;
+   
+
+}
+.cards2 > .trabajo1 > h4{
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.cards2 > .trabajo1 > p{
+    width: 280px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.cards2 > .trabajo1 > figure{
+    width: 310px;
+    height: 210px;
+    background: url(../img/desfile1.jpg); 
+    background-size: cover;
+    border-radius: 0 35% / 0 100%;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    margin: 20px;
+    transition: transform .2s;
+ 
+}
+.cards2 > .trabajo1 > figure:hover{
+    background: url(../img/dragon.jpg);
+
+    background-size: cover;
+    border-radius: 0 35% / 0 72%;
+    -moz-border-radius: 0 44% / 0 72%;
+    -webkit-border-radius: 0 37% / 0 72%;
+    margin: 20px;
+    transform: scale(1.09);
+}
+.cards2 > .trabajo2{
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 7px;
+    border-radius: 16px;
+    width: 358px;
+    background: #d7f7f5;
+}
+.cards2 > .trabajo2 > h4{
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.cards2 > .trabajo2 > figure{
+    width: 310px;
+    height: 210px;
+    background: url(../img/japan.jpg); 
+    background-size: cover;
+    border-radius: 0 35% / 0 100%;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    margin: 20px;
+    transition: transform .2s; 
+}
+.cards2 > .trabajo2 > figure:hover{
+    background: url(../img/remen.jpg);
+    background-size: cover;
+    border-radius: 0 35% / 0 72%;
+    -moz-border-radius: 0 44% / 0 72%;
+    -webkit-border-radius: 0 37% / 0 72%;
+    margin: 20px;
+    transform: scale(1.09);
+}
+.cards2 > .trabajo2 > p{
+    width: 280px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+}
+.cards2 > .trabajo3{
+    grid-column: 3/4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 7px;
+    border-radius: 16px;
+    width: 358px;
+    background: #d7f7f5;
+    
+}
+.cards2 > .trabajo3 > h4{
+    margin-top: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 25px;
+    font-weight: 700;
+}
+.cards2 > .trabajo3 > figure{
+    width: 310px;
+    height: 210px;
+    background: url(../img/grupo-bar.jpg); 
+    background-size: cover;
+    border-radius: 0 35% / 0 100%;
+    -moz-border-radius: 0 50% / 0 100%;
+    -webkit-border-radius: 0 50% / 0 100%;
+    margin: 20px;
+    transition: transform .2s; 
+}
+.cards2 > .trabajo3 > figure:hover{
+    background: url(../img/matsuri-banda.jpg);
+    background-size: cover;
+    border-radius: 0 35% / 0 72%;
+    -moz-border-radius: 0 44% / 0 72%;
+    -webkit-border-radius: 0 37% / 0 72%;
+    margin: 20px;
+    transform: scale(1.09);
+}
+
+/*competencias*/
+.competencias{
+    display: grid;
+    grid-template-rows: 295px;
+    grid-template-columns: repeat(5,1fr);
+}
+
+.competencias > div{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-column: 1/6;
+}
+.competencias > div > p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #cd5d7d;
+    border-radius: 286px;
+    width: 189px;
+    height: 195px;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    text-align: center;
+    
+}
+.competencias > div > p:hover{
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    font-size: 18px;
+    font-weight: 700;
+    text-align: center;
+    background: #2a6171;
+}
+/*footer*/
+footer{
+    grid-area: ft;
+    background: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+
+}
+.sec-footer{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #cd5d7d;
+    font-weight: 600;
+}
+span{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+
+}
+span > a {
+    text-decoration: none;
+    color: #cd5d7d;
+    font-weight: 600;
+   
+}
+
+.sec-footer > h4{
+    margin-bottom: 10px;
+    font-family: 'Open Sans', sans-serif;
+    color: white;
+    border-bottom: 1px solid white;
+    padding-bottom: 7px;
+    width: 173px;
+    text-align: center;
+}
